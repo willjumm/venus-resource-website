@@ -47,7 +47,7 @@ tailwind.config = {
 <body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary">
 
 <!-- Top Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md flex justify-between items-center px-8 py-6 max-w-full">
+<nav class="anim-nav fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md flex justify-between items-center px-8 py-6 max-w-full">
   <a href="index.html">
     <img alt="AVR Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uibAcxydhOgL2iMvYeB2MrHmdHFUb8m0XRS7K3Q1OcWPGXmq1sFfuAv2ZToRWfLwwx3Jr4Ipxql5mDPAKWNOC2e-e01mbdMKzjEjbQLzzfexwNGkupnvvFjGuwmdUzQn_e_CP09g1w98ra0pl-Z2PVc6cY-ocCV2VZUYGVfFNfxJqecCQen2gsukAkpLuJKnNLVecFaROyxgqxQIvFklobZI6TLztCLbfHLjpp4XCUnw3eu9GsTXSnwkEfoMAVGEfEDci0yBn9awA"/>
   </a>
@@ -86,20 +86,20 @@ tailwind.config = {
 <!-- Hero Section -->
 <section class="min-h-screen flex flex-col md:flex-row pt-20">
   <div class="flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-20 bg-surface">
-    <div class="text-primary font-bold text-xs tracking-[0.2em] mb-6 block uppercase">[01] MINING EXCELLENCE // 2024_CORE</div>
-    <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tighter text-on-surface mb-12 leading-none uppercase">Australia Venus Resource</h1>
+    <div class="hero-anim anim-label text-primary font-bold text-xs tracking-[0.2em] mb-6 block uppercase">[01] MINING EXCELLENCE // 2024_CORE</div>
+    <h1 class="hero-anim anim-headline text-5xl lg:text-7xl font-extrabold tracking-tighter text-on-surface mb-12 leading-none uppercase">Australia Venus Resource</h1>
     <div class="space-y-8 max-w-xl mb-12">
-      <div class="border-l-4 border-primary pl-6">
+      <div class="hero-anim anim-block-1 border-l-4 border-primary pl-6">
         <p class="text-lg leading-relaxed text-on-surface-variant font-body">Leveraging Australia's rich geological landscape to engineer a future of sustainable resource extraction and mineral sovereignty.</p>
       </div>
-      <div class="border-l-4 border-primary pl-6">
+      <div class="hero-anim anim-block-2 border-l-4 border-primary pl-6">
         <p class="text-lg leading-relaxed text-on-surface-variant font-body">Our strategic operations focus on high-yield deposits, utilizing precision in every phase of the exploration and extraction process as we look toward mining for the future.</p>
       </div>
-      <div class="border-l-4 border-primary pl-6">
+      <div class="hero-anim anim-block-3 border-l-4 border-primary pl-6">
         <p class="text-lg leading-relaxed text-on-surface-variant font-body">Commitment to transparency and ESG standards defines our operational roadmap, ensuring long-term value for stakeholders and the environment.</p>
       </div>
     </div>
-    <div class="flex flex-col sm:flex-row gap-4">
+    <div class="hero-anim anim-cta flex flex-col sm:flex-row gap-4">
       <a href="projects.html" class="bg-primary text-on-primary px-10 py-5 font-bold uppercase tracking-widest flex items-center group transition-all">
         Our Project
         <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">arrow_forward</span>
@@ -110,7 +110,7 @@ tailwind.config = {
       </a>
     </div>
   </div>
-  <div class="flex-1 min-h-[400px] md:min-h-screen relative overflow-hidden">
+  <div class="flex-1 min-h-[400px] md:min-h-screen relative overflow-hidden anim-image">
     <img alt="Aerial view of open-pit mining operations with stepped geological terraces" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhb46kZymGzy0BTF77FQvfMueyk0SrxgkDuJMMgfOqt8FT7t2khmPhrQ4KcofoAhyb86RnjzXtmTF8ZyDJn7e3eGtskuCte9Ob9QYIEVIML3lzvGbgH7aPjUGLyT74De4pmzdD8cMIs-xk0kO-nfdogjBpD-8OaP4A7lDepQc0X1aGE4NywdnUdsPP9MxD39uK8IuaoNg8sYQngbCGiM-DEikn4kBKp--EMd6ZhQrJ9osfi9bWWXgUWlstxKpYZcGWBFix0Ditx"/>
     <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
   </div>
@@ -205,7 +205,7 @@ tailwind.config = {
         <a class="font-['Inter'] text-sm tracking-widest uppercase text-stone-50 opacity-70 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
         <a class="font-['Inter'] text-sm tracking-widest uppercase text-stone-50 opacity-70 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
         <a class="font-['Inter'] text-sm tracking-widest uppercase text-stone-50 opacity-70 hover:opacity-100 transition-opacity" href="#">Whistleblower Policy</a>
-        <a class="font-['Inter'] text-sm tracking-widest uppercase text-stone-50 opacity-100 underline underline-offset-4" href="mailto:admin@avr-mining.com.au">Contact: admin@avr-mining.com.au</a>
+        <a class="font-['Inter'] text-sm tracking-widest uppercase text-stone-50 opacity-100 underline underline-offset-4" href="mailto:info@venusresource.com.au">Contact: info@venusresource.com.au</a>
       </div>
     </div>
     <div class="w-full h-px bg-white/10 mb-12"></div>

@@ -9,6 +9,100 @@
 body { font-family: 'Inter', sans-serif; }
 h1, h2, h3, .brand { font-family: 'Plus Jakarta Sans', sans-serif; }
 
+/* ── Hero load animation keyframes ── */
+@keyframes heroNavDrop {
+    from { opacity: 0; transform: translateY(-100%); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroLabelWipe {
+    from { opacity: 0; clip-path: inset(0 100% 0 0); }
+    to   { opacity: 1; clip-path: inset(0 0% 0 0); }
+}
+@keyframes heroHeadlineRise {
+    from { opacity: 0; clip-path: inset(100% 0 0 0); transform: translateY(30px); }
+    to   { opacity: 1; clip-path: inset(0% 0 0 0);   transform: translateY(0); }
+}
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroCurtainReveal {
+    from { clip-path: inset(0 100% 0 0); }
+    to   { clip-path: inset(0 0% 0 0); }
+}
+@keyframes heroBarGrow {
+    from { transform: scaleY(0); }
+    to   { transform: scaleY(1); }
+}
+
+/* Hero animation base: hide until animation plays */
+.hero-anim {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Nav entrance */
+.anim-nav {
+    opacity: 0;
+    animation: heroNavDrop 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+/* Data label wipe */
+.anim-label {
+    animation-name: heroLabelWipe;
+    animation-duration: 0.8s;
+    animation-delay: 0.5s;
+}
+
+/* Headline rise with clip */
+.anim-headline {
+    animation-name: heroHeadlineRise;
+    animation-duration: 0.9s;
+    animation-delay: 0.7s;
+}
+
+/* Staggered text blocks */
+.anim-block-1 {
+    animation-name: heroFadeUp;
+    animation-duration: 0.7s;
+    animation-delay: 1.0s;
+}
+.anim-block-2 {
+    animation-name: heroFadeUp;
+    animation-duration: 0.7s;
+    animation-delay: 1.15s;
+}
+.anim-block-3 {
+    animation-name: heroFadeUp;
+    animation-duration: 0.7s;
+    animation-delay: 1.3s;
+}
+
+/* CTA buttons */
+.anim-cta {
+    animation-name: heroFadeUp;
+    animation-duration: 0.6s;
+    animation-delay: 1.5s;
+}
+
+/* Hero image curtain */
+.anim-image {
+    clip-path: inset(0 100% 0 0);
+    animation: heroCurtainReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero-anim, .anim-nav, .anim-image,
+    .anim-bar, .anim-bar-1, .anim-bar-2, .anim-bar-3 {
+        opacity: 1 !important;
+        clip-path: none !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}
+
 /* Scroll animation base states */
 .scroll-reveal {
     opacity: 0;
