@@ -35,13 +35,6 @@ h1, h2, h3, .brand { font-family: 'Plus Jakarta Sans', sans-serif; }
     to   { transform: scaleY(1); }
 }
 
-/* Hero animation base: hide until animation plays */
-.hero-anim {
-    opacity: 0 !important;
-    animation-fill-mode: forwards !important;
-    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-
 /* Nav entrance */
 .anim-nav {
     opacity: 0 !important;
@@ -50,27 +43,33 @@ h1, h2, h3, .brand { font-family: 'Plus Jakarta Sans', sans-serif; }
 
 /* Data label wipe */
 .anim-label {
+    opacity: 0 !important;
     animation: heroLabelWipe 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards !important;
 }
 
 /* Headline rise with clip */
 .anim-headline {
+    opacity: 0 !important;
     animation: heroHeadlineRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards !important;
 }
 
 /* Staggered text blocks */
 .anim-block-1 {
+    opacity: 0 !important;
     animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards !important;
 }
 .anim-block-2 {
+    opacity: 0 !important;
     animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.15s forwards !important;
 }
 .anim-block-3 {
+    opacity: 0 !important;
     animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards !important;
 }
 
 /* CTA buttons */
 .anim-cta {
+    opacity: 0 !important;
     animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards !important;
 }
 
@@ -163,7 +162,9 @@ h1, h2, h3, .brand { font-family: 'Plus Jakarta Sans', sans-serif; }
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-    .hero-anim, .anim-nav, .anim-image {
+    .anim-nav, .anim-label, .anim-headline,
+    .anim-block-1, .anim-block-2, .anim-block-3,
+    .anim-cta, .anim-image {
         opacity: 1 !important;
         clip-path: none !important;
         transform: none !important;
