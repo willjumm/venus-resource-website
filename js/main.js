@@ -86,6 +86,33 @@
     reveals.forEach(function (el) { observer.observe(el); });
   }
 
+  // ── Chart scroll animations ──
+  var charts = document.querySelectorAll('[data-chart]');
+  if (charts.length) {
+    var chartObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          // Animate bar fills
+          entry.target.querySelectorAll('.chart-bar-fill').forEach(function (bar) {
+            bar.classList.add('chart-animated');
+          });
+          // Animate ring charts
+          entry.target.querySelectorAll('.ring-chart-bg').forEach(function (ring) {
+            ring.classList.add('chart-animated');
+          });
+          // Animate growth bar columns
+          entry.target.querySelectorAll('.growth-bar-col').forEach(function (col, i) {
+            setTimeout(function () {
+              col.classList.add('chart-animated');
+            }, i * 100);
+          });
+          chartObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    charts.forEach(function (el) { chartObserver.observe(el); });
+  }
+
   // ── Contact form handling ──
   var form = document.getElementById('contact-form');
   if (form) {

@@ -92,15 +92,98 @@ h1, h2, h3, .brand { font-family: 'Plus Jakarta Sans', sans-serif; }
     animation: heroCurtainReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
 }
 
+/* ── Market research: CSS-only charts ── */
+
+/* Horizontal bar chart */
+.chart-bar-track {
+    height: 32px;
+    background: rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+}
+.chart-bar-fill {
+    height: 100%;
+    background: #0d631b;
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+}
+.chart-bar-fill.chart-animated { width: var(--bar-width); }
+
+/* Ring / donut chart */
+.ring-chart {
+    width: 160px;
+    height: 160px;
+    border-radius: 9999px;
+    background: conic-gradient(
+        #0d631b 0deg,
+        #0d631b var(--ring-deg, 0deg),
+        rgba(255,255,255,0.1) var(--ring-deg, 0deg),
+        rgba(255,255,255,0.1) 360deg
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: --ring-deg 1s ease;
+    position: relative;
+}
+.ring-chart-inner {
+    width: 110px;
+    height: 110px;
+    border-radius: 9999px;
+    background: #1c1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Animated ring via clip-path reveal */
+.ring-chart-bg {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: conic-gradient(
+        #2e7d32 0deg,
+        #0d631b var(--ring-deg, 324deg),
+        rgba(255,255,255,0.08) var(--ring-deg, 324deg),
+        rgba(255,255,255,0.08) 360deg
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.ring-chart-bg.chart-animated { opacity: 1; }
+
+/* Growth comparison bars */
+.growth-bar {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 120px;
+}
+.growth-bar-col {
+    width: 48px;
+    background: rgba(255,255,255,0.1);
+    transition: height 1s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 8px;
+    position: relative;
+}
+.growth-bar-col.chart-animated { height: var(--col-height); }
+.growth-bar-col.active { background: #0d631b; }
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-    .hero-anim, .anim-nav, .anim-image,
-    .anim-bar, .anim-bar-1, .anim-bar-2, .anim-bar-3 {
+    .hero-anim, .anim-nav, .anim-image {
         opacity: 1 !important;
         clip-path: none !important;
         transform: none !important;
         animation: none !important;
     }
+    .chart-bar-fill { transition: none; width: var(--bar-width) !important; }
+    .growth-bar-col { transition: none; height: var(--col-height) !important; }
+    .ring-chart-bg { transition: none; opacity: 1 !important; }
 }
 
 /* Scroll animation base states */
