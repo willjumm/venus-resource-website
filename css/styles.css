@@ -37,59 +37,47 @@ h1, h2, h3, .brand { font-family: 'Plus Jakarta Sans', sans-serif; }
 
 /* Hero animation base: hide until animation plays */
 .hero-anim {
-    opacity: 0;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0 !important;
+    animation-fill-mode: forwards !important;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 /* Nav entrance */
 .anim-nav {
-    opacity: 0;
-    animation: heroNavDrop 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    opacity: 0 !important;
+    animation: heroNavDrop 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards !important;
 }
 
 /* Data label wipe */
 .anim-label {
-    animation-name: heroLabelWipe;
-    animation-duration: 0.8s;
-    animation-delay: 0.5s;
+    animation: heroLabelWipe 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards !important;
 }
 
 /* Headline rise with clip */
 .anim-headline {
-    animation-name: heroHeadlineRise;
-    animation-duration: 0.9s;
-    animation-delay: 0.7s;
+    animation: heroHeadlineRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards !important;
 }
 
 /* Staggered text blocks */
 .anim-block-1 {
-    animation-name: heroFadeUp;
-    animation-duration: 0.7s;
-    animation-delay: 1.0s;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards !important;
 }
 .anim-block-2 {
-    animation-name: heroFadeUp;
-    animation-duration: 0.7s;
-    animation-delay: 1.15s;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.15s forwards !important;
 }
 .anim-block-3 {
-    animation-name: heroFadeUp;
-    animation-duration: 0.7s;
-    animation-delay: 1.3s;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards !important;
 }
 
 /* CTA buttons */
 .anim-cta {
-    animation-name: heroFadeUp;
-    animation-duration: 0.6s;
-    animation-delay: 1.5s;
+    animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards !important;
 }
 
 /* Hero image curtain */
 .anim-image {
-    clip-path: inset(0 100% 0 0);
-    animation: heroCurtainReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    clip-path: inset(0 100% 0 0) !important;
+    animation: heroCurtainReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards !important;
 }
 
 /* ── Market research: CSS-only charts ── */
