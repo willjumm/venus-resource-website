@@ -35,48 +35,40 @@ h1, h2, h3, .brand { font-family: 'Plus Jakarta Sans', sans-serif; }
     to   { transform: scaleY(1); }
 }
 
-/* Nav entrance */
-.anim-nav {
-    opacity: 0 !important;
-    animation: heroNavDrop 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards !important;
-}
-
-/* Data label wipe */
-.anim-label {
-    opacity: 0 !important;
-    animation: heroLabelWipe 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards !important;
-}
-
-/* Headline rise with clip */
-.anim-headline {
-    opacity: 0 !important;
-    animation: heroHeadlineRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards !important;
-}
-
-/* Staggered text blocks */
-.anim-block-1 {
-    opacity: 0 !important;
-    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards !important;
-}
-.anim-block-2 {
-    opacity: 0 !important;
-    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.15s forwards !important;
-}
-.anim-block-3 {
-    opacity: 0 !important;
-    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards !important;
-}
-
-/* CTA buttons */
-.anim-cta {
-    opacity: 0 !important;
-    animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards !important;
-}
-
-/* Hero image curtain */
-.anim-image {
-    clip-path: inset(0 100% 0 0) !important;
-    animation: heroCurtainReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards !important;
+/* Hero animations — desktop only (mobile shows content immediately) */
+@media (min-width: 768px) {
+    .anim-nav {
+        opacity: 0 !important;
+        animation: heroNavDrop 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards !important;
+    }
+    .anim-label {
+        opacity: 0 !important;
+        animation: heroLabelWipe 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards !important;
+    }
+    .anim-headline {
+        opacity: 0 !important;
+        animation: heroHeadlineRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards !important;
+    }
+    .anim-block-1 {
+        opacity: 0 !important;
+        animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards !important;
+    }
+    .anim-block-2 {
+        opacity: 0 !important;
+        animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.15s forwards !important;
+    }
+    .anim-block-3 {
+        opacity: 0 !important;
+        animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards !important;
+    }
+    .anim-cta {
+        opacity: 0 !important;
+        animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards !important;
+    }
+    .anim-image {
+        clip-path: inset(0 100% 0 0) !important;
+        animation: heroCurtainReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards !important;
+    }
 }
 
 /* ── Market research: CSS-only charts ── */
