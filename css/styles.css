@@ -35,39 +35,34 @@ h1, h2, h3, .brand { font-family: 'Plus Jakarta Sans', sans-serif; }
     to   { transform: scaleY(1); }
 }
 
-/* Hero animations — desktop only (mobile shows content immediately) */
+/* Hero animations — desktop only (mobile shows content immediately)
+   Uses fill-mode:both so the "from" keyframe applies during the delay
+   (keeping elements hidden) and "to" keyframe persists after completion.
+   Do NOT use !important on opacity — it blocks animation overrides. */
 @media (min-width: 768px) {
     .anim-nav {
-        opacity: 0 !important;
-        animation: heroNavDrop 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards !important;
+        animation: heroNavDrop 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
     }
     .anim-label {
-        opacity: 0 !important;
-        animation: heroLabelWipe 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards !important;
+        animation: heroLabelWipe 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
     }
     .anim-headline {
-        opacity: 0 !important;
-        animation: heroHeadlineRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards !important;
+        animation: heroHeadlineRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
     }
     .anim-block-1 {
-        opacity: 0 !important;
-        animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards !important;
+        animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.0s both;
     }
     .anim-block-2 {
-        opacity: 0 !important;
-        animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.15s forwards !important;
+        animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.15s both;
     }
     .anim-block-3 {
-        opacity: 0 !important;
-        animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards !important;
+        animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.3s both;
     }
     .anim-cta {
-        opacity: 0 !important;
-        animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards !important;
+        animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.5s both;
     }
     .anim-image {
-        clip-path: inset(0 100% 0 0) !important;
-        animation: heroCurtainReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards !important;
+        animation: heroCurtainReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
     }
 }
 
