@@ -19,21 +19,24 @@ venus-website/
 
 ## Setup
 
-No build step required. Open `index.html` in a browser or deploy to any static host.
+```bash
+npm install
+npm run build        # builds css/tailwind.min.css
+```
 
 ### Local preview
 
 ```bash
-# Python
-python -m http.server 8000
-
-# Node
 npx serve .
 ```
 
-### Deploy
+### Deploy (Vercel)
 
-Upload the entire `venus-website/` folder to Netlify, Vercel, GitHub Pages, or any static hosting provider.
+Connect the GitHub repo. Set:
+- **Build Command:** `npm run build`
+- **Output Directory:** `.`
+
+The pre-built `css/tailwind.min.css` is committed to the repo, so the site also works without a build step.
 
 ## Contact Form
 

@@ -1,0 +1,27 @@
+{
+  "name": "venus-website",
+  "version": "1.0.0",
+  "description": "Static multi-page website for Australia Venus Resource (AVR).",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i css/tailwind-input.css -o css/tailwind.min.css --minify",
+    "build": "npm run build:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willjumm/venus-resource-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/willjumm/venus-resource-website/issues"
+  },
+  "homepage": "https://github.com/willjumm/venus-resource-website#readme",
+  "devDependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "tailwindcss": "^3.4.19"
+  }
+}
