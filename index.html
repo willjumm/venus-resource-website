@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Australia Venus Resource — Phosphate &amp; Critical Minerals</title>
+<meta name="description" content="Australia Venus Resource (AVR) is a strategic mining company focused on phosphate and critical minerals extraction in Australia's premier mining jurisdictions."/>
+<meta property="og:title" content="Australia Venus Resource — Phosphate &amp; Critical Minerals"/>
+<meta property="og:description" content="Leveraging Australia's rich geological landscape for sustainable resource extraction and mineral sovereignty."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="assets/favicon.svg"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-tertiary-fixed-variant":"#005313","on-surface":"#1c1b1b","on-secondary-container":"#307231",
+        "outline":"#707a6c","secondary":"#2a6b2c","on-tertiary":"#ffffff","surface":"#fcf9f8",
+        "on-primary-container":"#cbffc2","tertiary":"#006419","outline-variant":"#bfcaba",
+        "surface-container-highest":"#e5e2e1","on-primary-fixed-variant":"#005312",
+        "primary-container":"#2e7d32","surface-tint":"#1b6d24","background":"#fcf9f8",
+        "on-secondary-fixed":"#002203","on-tertiary-container":"#caffc2",
+        "on-secondary-fixed-variant":"#0c5216","secondary-fixed-dim":"#91d78a",
+        "on-surface-variant":"#40493d","on-background":"#1c1b1b","surface-variant":"#e5e2e1",
+        "on-tertiary-fixed":"#002204","on-primary-fixed":"#002204","on-primary":"#ffffff",
+        "inverse-on-surface":"#f3f0ef","on-error":"#ffffff","surface-dim":"#dcd9d9",
+        "on-error-container":"#93000a","primary-fixed":"#a3f69c","secondary-fixed":"#acf4a4",
+        "surface-container-lowest":"#ffffff","error":"#ba1a1a","inverse-surface":"#313030",
+        "tertiary-container":"#127f26","surface-container":"#f0eded","error-container":"#ffdad6",
+        "tertiary-fixed-dim":"#78dc77","primary":"#0d631b","surface-container-high":"#eae7e7",
+        "on-secondary":"#ffffff","tertiary-fixed":"#94f990","primary-fixed-dim":"#88d982",
+        "inverse-primary":"#88d982","surface-container-low":"#f6f3f2",
+        "surface-bright":"#fcf9f8","secondary-container":"#acf4a4"
+      },
+      borderRadius: { DEFAULT:"0px", lg:"0px", xl:"0px", full:"9999px" },
+      fontFamily: { headline:["Plus Jakarta Sans"], body:["Inter"], label:["Inter"] }
+    }
+  }
+};
+</script>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary">
+
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md flex justify-between items-center px-8 py-6 max-w-full">
+  <a href="index.html">
+    <img alt="AVR Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uibAcxydhOgL2iMvYeB2MrHmdHFUb8m0XRS7K3Q1OcWPGXmq1sFfuAv2ZToRWfLwwx3Jr4Ipxql5mDPAKWNOC2e-e01mbdMKzjEjbQLzzfexwNGkupnvvFjGuwmdUzQn_e_CP09g1w98ra0pl-Z2PVc6cY-ocCV2VZUYGVfFNfxJqecCQen2gsukAkpLuJKnNLVecFaROyxgqxQIvFklobZI6TLztCLbfHLjpp4XCUnw3eu9GsTXSnwkEfoMAVGEfEDci0yBn9awA"/>
+  </a>
+  <!-- Desktop Links -->
+  <div class="hidden md:flex items-center space-x-12">
+    <a data-nav-link href="index.html" class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight uppercase transition-colors">Home</a>
+    <a data-nav-link href="projects.html" class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight uppercase transition-colors">Projects</a>
+    <a data-nav-link href="corporate.html" class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight uppercase transition-colors">Corporate</a>
+    <a data-nav-link href="contact.html" class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight uppercase transition-colors">Contact</a>
+  </div>
+  <div class="flex items-center gap-4">
+    <a href="contact.html" class="bg-primary text-on-primary px-8 py-3 font-['Plus_Jakarta_Sans'] font-bold tracking-tight uppercase hover:opacity-80 transition-all hidden sm:inline-block">ENQUIRE</a>
+    <!-- Hamburger button (mobile) -->
+    <button id="hamburger-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5">
+      <span class="block w-6 h-0.5 bg-on-surface"></span>
+      <span class="block w-6 h-0.5 bg-on-surface"></span>
+      <span class="block w-6 h-0.5 bg-on-surface"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile slide-out menu -->
+<div id="mobile-menu-overlay" class="mobile-menu-overlay fixed inset-0 bg-black/40 z-[60]"></div>
+<div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-surface z-[70] flex flex-col p-8 pt-20 gap-8">
+  <button id="close-menu-btn" class="absolute top-6 right-6">
+    <span class="material-symbols-outlined text-on-surface text-2xl">close</span>
+  </button>
+  <a href="index.html" class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight uppercase text-lg">Home</a>
+  <a href="projects.html" class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight uppercase text-lg">Projects</a>
+  <a href="corporate.html" class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight uppercase text-lg">Corporate</a>
+  <a href="contact.html" class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight uppercase text-lg">Contact</a>
+  <a href="contact.html" class="bg-primary text-on-primary px-6 py-3 font-bold uppercase tracking-tight text-center mt-4">ENQUIRE</a>
+</div>
+
+<main>
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col md:flex-row pt-20">
+  <div class="flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-20 bg-surface">
+    <div class="text-primary font-bold text-xs tracking-[0.2em] mb-6 block uppercase">[01] MINING EXCELLENCE // 2024_CORE</div>
+    <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tighter text-on-surface mb-12 leading-none uppercase">Australia Venus Resource</h1>
+    <div class="space-y-8 max-w-xl mb-12">
+      <div class="border-l-4 border-primary pl-6">
+        <p class="text-lg leading-relaxed text-on-surface-variant font-body">Leveraging Australia's rich geological landscape to engineer a future of sustainable resource extraction and mineral sovereignty.</p>
+      </div>
+      <div class="border-l-4 border-primary pl-6">
+        <p class="text-lg leading-relaxed text-on-surface-variant font-body">Our strategic operations focus on high-yield deposits, utilizing precision in every phase of the exploration and extraction process as we look toward mining for the future.</p>
+      </div>
+      <div class="border-l-4 border-primary pl-6">
+        <p class="text-lg leading-relaxed text-on-surface-variant font-body">Commitment to transparency and ESG standards defines our operational roadmap, ensuring long-term value for stakeholders and the environment.</p>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="projects.html" class="bg-primary text-on-primary px-10 py-5 font-bold uppercase tracking-widest flex items-center group transition-all">
+        Our Project
+        <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">arrow_forward</span>
+      </a>
+      <a href="contact.html" class="border border-primary text-primary px-10 py-5 font-bold uppercase tracking-widest flex items-center group transition-all">
+        Contact Us
+        <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+  <div class="flex-1 min-h-[400px] md:min-h-screen relative overflow-hidden">
+    <img alt="Aerial view of open-pit mining operations with stepped geological terraces" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhb46kZymGzy0BTF77FQvfMueyk0SrxgkDuJMMgfOqt8FT7t2khmPhrQ4KcofoAhyb86RnjzXtmTF8ZyDJn7e3eGtskuCte9Ob9QYIEVIML3lzvGbgH7aPjUGLyT74De4pmzdD8cMIs-xk0kO-nfdogjBpD-8OaP4A7lDepQc0X1aGE4NywdnUdsPP9MxD39uK8IuaoNg8sYQngbCGiM-DEikn4kBKp--EMd6ZhQrJ9osfi9bWWXgUWlstxKpYZcGWBFix0Ditx"/>
+    <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+  </div>
+</section>
+
+<!-- Why Venus Section -->
+<section class="py-32 bg-surface-container-low px-8 md:px-16 lg:px-24">
+  <div class="max-w-7xl mx-auto">
+    <div class="scroll-reveal">
+      <div class="text-primary font-bold text-xs tracking-[0.2em] mb-4 uppercase">[02] STRATEGIC ADVANTAGE // ANALYSIS</div>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-20 uppercase">Why Venus Resource</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 scroll-reveal">
+      <div class="bg-surface p-12 border-l-4 border-primary">
+        <span class="text-primary font-bold text-sm tracking-tighter block mb-6">[01]</span>
+        <h3 class="text-2xl font-bold mb-6 tracking-tight uppercase">Permitted &amp; Production-Ready</h3>
+        <p class="text-on-surface-variant leading-relaxed">Infrastructure is in place with all critical environmental and operational permits secured for immediate scaling of activities.</p>
+      </div>
+      <div class="bg-surface p-12 border-l-4 border-primary">
+        <span class="text-primary font-bold text-sm tracking-tighter block mb-6">[02]</span>
+        <h3 class="text-2xl font-bold mb-6 tracking-tight uppercase">Strategic Location</h3>
+        <p class="text-on-surface-variant leading-relaxed">Situated in Australia's premier mining jurisdictions with direct access to established rail, power, and deep-water port infrastructure.</p>
+      </div>
+      <div class="bg-surface p-12 border-l-4 border-primary">
+        <span class="text-primary font-bold text-sm tracking-tighter block mb-6">[03]</span>
+        <h3 class="text-2xl font-bold mb-6 tracking-tight uppercase">Multi-Commodity Upside</h3>
+        <p class="text-on-surface-variant leading-relaxed">Diversified asset portfolio targeting critical minerals and base metals essential for the global energy transition.</p>
+      </div>
+      <div class="bg-surface p-12 border-l-4 border-primary">
+        <span class="text-primary font-bold text-sm tracking-tighter block mb-6">[04]</span>
+        <h3 class="text-2xl font-bold mb-6 tracking-tight uppercase">Experienced Leadership</h3>
+        <p class="text-on-surface-variant leading-relaxed">A board and management team with a proven track record of discovering, developing, and operating world-class mines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Production Pathway Section -->
+<section class="py-32 bg-white px-8 md:px-16 lg:px-24 overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div class="scroll-reveal">
+      <div class="text-primary font-bold text-xs tracking-[0.2em] mb-4 uppercase">[03] OPERATIONAL TIMELINE // MILESTONES</div>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-24 uppercase">Our Production Pathway</h2>
+    </div>
+    <div class="relative">
+      <div class="hidden md:block absolute top-12 left-0 w-full h-1 bg-surface-container-highest"></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative scroll-reveal">
+        <div class="relative">
+          <div class="hidden md:flex items-center justify-center w-24 h-24 bg-primary text-on-primary font-black text-xl mb-10 relative z-10">S_01</div>
+          <div class="md:hidden flex items-center gap-4 mb-6">
+            <div class="w-12 h-1 bg-primary"></div>
+            <span class="font-bold text-primary">STAGE 1</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4 uppercase">Near-Term</h3>
+          <p class="text-on-surface-variant leading-relaxed">Initial bulk sampling and pilot plant commissioning to validate metallurgical recovery rates and optimize flowsheets.</p>
+        </div>
+        <div class="relative">
+          <div class="hidden md:flex items-center justify-center w-24 h-24 bg-primary text-on-primary font-black text-xl mb-10 relative z-10">S_02</div>
+          <div class="md:hidden flex items-center gap-4 mb-6">
+            <div class="w-12 h-1 bg-primary"></div>
+            <span class="font-bold text-primary">STAGE 2</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4 uppercase">Scale-Up</h3>
+          <p class="text-on-surface-variant leading-relaxed">Transition to full-scale commercial production, expanding pit footprint and integrating advanced automation for operational efficiency.</p>
+        </div>
+        <div class="relative">
+          <div class="hidden md:flex items-center justify-center w-24 h-24 bg-primary text-on-primary font-black text-xl mb-10 relative z-10">S_03</div>
+          <div class="md:hidden flex items-center gap-4 mb-6">
+            <div class="w-12 h-1 bg-primary"></div>
+            <span class="font-bold text-primary">STAGE 3</span>
+          </div>
+          <h3 class="text-xl font-bold mb-4 uppercase">Downstream &amp; Diversification</h3>
+          <p class="text-on-surface-variant leading-relaxed">Exploration of value-add processing capabilities and expansion into adjacent high-value mineral tenements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#0d631b] dark:bg-[#062e0d] border-t-4 border-white/10 w-full py-20 px-8">
+  <div class="flex flex-col items-start max-w-7xl mx-auto w-full">
+    <span class="text-3xl font-black text-stone-50 mb-8 block uppercase tracking-tighter">
+      <a href="index.html"><img alt="AVR Logo" class="h-12 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/ADBb0uibAcxydhOgL2iMvYeB2MrHmdHFUb8m0XRS7K3Q1OcWPGXmq1sFfuAv2ZToRWfLwwx3Jr4Ipxql5mDPAKWNOC2e-e01mbdMKzjEjbQLzzfexwNGkupnvvFjGuwmdUzQn_e_CP09g1w98ra0pl-Z2PVc6cY-ocCV2VZUYGVfFNfxJqecCQen2gsukAkpLuJKnNLVecFaROyxgqxQIvFklobZI6TLztCLbfHLjpp4XCUnw3eu9GsTXSnwkEfoMAVGEfEDci0yBn9awA"/></a>
+    </span>
+    <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-12 mb-16">
+      <div class="space-y-4">
+        <p class="text-stone-50 font-['Inter'] text-sm tracking-widest uppercase opacity-100">&copy; 2024 AUSTRALIA VENUS RESOURCE. ALL RIGHTS RESERVED. [MINING FOR THE FUTURE]</p>
+      </div>
+      <div class="flex flex-wrap gap-8 md:justify-end">
+        <a class="font-['Inter'] text-sm tracking-widest uppercase text-stone-50 opacity-70 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+        <a class="font-['Inter'] text-sm tracking-widest uppercase text-stone-50 opacity-70 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+        <a class="font-['Inter'] text-sm tracking-widest uppercase text-stone-50 opacity-70 hover:opacity-100 transition-opacity" href="#">Whistleblower Policy</a>
+        <a class="font-['Inter'] text-sm tracking-widest uppercase text-stone-50 opacity-100 underline underline-offset-4" href="mailto:admin@avr-mining.com.au">Contact: admin@avr-mining.com.au</a>
+      </div>
+    </div>
+    <div class="w-full h-px bg-white/10 mb-12"></div>
+    <div class="w-full flex justify-between items-end">
+      <div class="text-stone-50/20 text-[10vw] font-black leading-none pointer-events-none select-none uppercase">VENUS</div>
+      <div class="flex space-x-6 text-stone-50">
+        <span class="material-symbols-outlined">public</span>
+        <span class="material-symbols-outlined">precision_manufacturing</span>
+        <span class="material-symbols-outlined">engineering</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Bottom Nav -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-stone-50 dark:bg-stone-900 z-50 flex justify-around py-4 border-t border-outline-variant/10">
+  <button data-mobile-nav data-href="index.html" class="flex flex-col items-center gap-1 p-2">
+    <span class="material-symbols-outlined">home</span>
+    <span class="text-[10px] uppercase">Home</span>
+  </button>
+  <button data-mobile-nav data-href="projects.html" class="flex flex-col items-center gap-1 p-2">
+    <span class="material-symbols-outlined">foundation</span>
+    <span class="text-[10px] uppercase">Projects</span>
+  </button>
+  <button data-mobile-nav data-href="corporate.html" class="flex flex-col items-center gap-1 p-2">
+    <span class="material-symbols-outlined">business_center</span>
+    <span class="text-[10px] uppercase">Corporate</span>
+  </button>
+  <button data-mobile-nav data-href="contact.html" class="flex flex-col items-center gap-1 p-2">
+    <span class="material-symbols-outlined">mail</span>
+    <span class="text-[10px] uppercase">Contact</span>
+  </button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
