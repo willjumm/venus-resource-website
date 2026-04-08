@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Venus Resource — Business Card Options</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #e5e2e1;
+    color: #1c1b1b;
+    padding: 60px 40px;
+  }
+  h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+  .page-header {
+    max-width: 1100px;
+    margin: 0 auto 60px;
+  }
+  .page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .page-header p {
+    color: #40493d;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .option-section {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+  }
+  .option-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #0d631b;
+    margin-bottom: 8px;
+  }
+  .option-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .option-desc {
+    color: #40493d;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 600px;
+  }
+
+  .cards-row {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .card-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-group-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #707a6c;
+  }
+
+  /* ══════════════════════════════════════
+     Card base — 90mm x 55mm at 96dpi ≈ 340px x 208px
+     Scaled up 1.3x for screen preview
+  ══════════════════════════════════════ */
+  .card {
+    width: 442px;
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* ──────────────────────────────────────
+     OPTION 1: Asymmetric Split
+  ────────────────────────────────────── */
+  .opt1-general {
+    display: flex;
+    background: #fcf9f8;
+  }
+  .opt1-general .accent-bar {
+    width: 35%;
+    background: #0d631b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px 20px;
+  }
+  .opt1-general .accent-bar .logo-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .opt1-general .accent-bar .tag {
+    font-size: 0.45rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .opt1-general .content {
+    flex: 1;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .opt1-general .content .bracket-label {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #0d631b;
+  }
+  .opt1-general .content .company-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    color: #1c1b1b;
+  }
+  .opt1-general .content .tagline {
+    font-size: 0.55rem;
+    color: #40493d;
+    line-height: 1.5;
+    max-width: 200px;
+    letter-spacing: 0.02em;
+  }
+  .opt1-general .content .details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .opt1-general .content .details span {
+    font-size: 0.5rem;
+    color: #40493d;
+    letter-spacing: 0.08em;
+  }
+  .opt1-general .content .details .highlight {
+    color: #0d631b;
+    font-weight: 700;
+  }
+  .opt1-general .content .website {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0d631b;
+  }
+
+  /* Option 1 personal */
+  .opt1-personal {
+    display: flex;
+    background: #fcf9f8;
+  }
+  .opt1-personal .accent-bar {
+    width: 35%;
+    background: #0d631b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px 20px;
+  }
+  .opt1-personal .accent-bar .logo-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .opt1-personal .accent-bar .tag {
+    font-size: 0.45rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .opt1-personal .content {
+    flex: 1;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .opt1-personal .content .person-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: #1c1b1b;
+  }
+  .opt1-personal .content .person-title {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #0d631b;
+    margin-top: 4px;
+  }
+  .opt1-personal .content .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .opt1-personal .content .contact-details span {
+    font-size: 0.5rem;
+    color: #40493d;
+    letter-spacing: 0.06em;
+  }
+  .opt1-personal .content .contact-details .label {
+    font-weight: 700;
+    color: #1c1b1b;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.42rem;
+    margin-top: 4px;
+  }
+  .opt1-personal .content .website {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0d631b;
+  }
+
+  /* ──────────────────────────────────────
+     OPTION 2: Full Green Back (two-sided)
+  ────────────────────────────────────── */
+  .opt2-pair {
+    display: flex;
+    gap: 4px;
+  }
+  /* Front */
+  .opt2-front {
+    background: #fcf9f8;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .opt2-front .top-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .opt2-front .bracket-label {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #0d631b;
+  }
+  .opt2-front .company-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: #1c1b1b;
+    line-height: 1.2;
+  }
+  .opt2-front .person-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: #1c1b1b;
+  }
+  .opt2-front .person-title {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #0d631b;
+  }
+  .opt2-front .tagline {
+    font-size: 0.55rem;
+    color: #40493d;
+    line-height: 1.5;
+    border-left: 3px solid #0d631b;
+    padding-left: 10px;
+    max-width: 280px;
+  }
+  .opt2-front .bottom-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .opt2-front .contact-col {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .opt2-front .contact-col span {
+    font-size: 0.5rem;
+    color: #40493d;
+    letter-spacing: 0.06em;
+  }
+  .opt2-front .contact-col .highlight {
+    color: #0d631b;
+    font-weight: 700;
+  }
+  .opt2-front .website {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0d631b;
+  }
+
+  /* Back */
+  .opt2-back {
+    background: #0d631b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .opt2-back .logo-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .opt2-back .divider {
+    width: 40px;
+    height: 2px;
+    background: rgba(255,255,255,0.2);
+  }
+  .opt2-back .tag {
+    font-size: 0.48rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ──────────────────────────────────────
+     OPTION 3: Editorial Minimal
+  ────────────────────────────────────── */
+  .opt3-general {
+    background: #fcf9f8;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 4px solid #0d631b;
+  }
+  .opt3-general .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .opt3-general .top .bracket-label {
+    font-size: 0.48rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #0d631b;
+  }
+  .opt3-general .top .code {
+    font-size: 0.42rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #bfcaba;
+  }
+  .opt3-general .middle {
+    padding-left: 0;
+  }
+  .opt3-general .company-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: #1c1b1b;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .opt3-general .tagline {
+    font-size: 0.55rem;
+    color: #40493d;
+    line-height: 1.6;
+    max-width: 300px;
+  }
+  .opt3-general .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .opt3-general .bottom .details {
+    display: flex;
+    gap: 24px;
+  }
+  .opt3-general .bottom .details span {
+    font-size: 0.48rem;
+    color: #40493d;
+    letter-spacing: 0.06em;
+  }
+  .opt3-general .bottom .details .highlight {
+    color: #0d631b;
+    font-weight: 700;
+  }
+  .opt3-general .bottom .website {
+    font-size: 0.48rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0d631b;
+  }
+
+  /* Option 3 personal */
+  .opt3-personal {
+    background: #fcf9f8;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 4px solid #0d631b;
+  }
+  .opt3-personal .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .opt3-personal .top .company-small {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #707a6c;
+  }
+  .opt3-personal .top .bracket-label {
+    font-size: 0.42rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #0d631b;
+  }
+  .opt3-personal .middle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .opt3-personal .person-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: #1c1b1b;
+    line-height: 1;
+  }
+  .opt3-personal .person-title {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #0d631b;
+  }
+  .opt3-personal .bottom {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+  }
+  .opt3-personal .bottom .detail-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .opt3-personal .bottom .detail-col .label {
+    font-size: 0.38rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #bfcaba;
+  }
+  .opt3-personal .bottom .detail-col span {
+    font-size: 0.48rem;
+    color: #40493d;
+    letter-spacing: 0.04em;
+  }
+
+  /* ──────────────────────────────────────
+     Side label for front/back
+  ────────────────────────────────────── */
+  .side-label {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #bfcaba;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .side-col {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <p style="color:#0d631b; font-size:0.65rem; font-weight:700; letter-spacing:0.2em; margin-bottom:8px;">[BRAND COLLATERAL // 2026]</p>
+  <h1>Business Card Options</h1>
+  <p>Australia Venus Resource &mdash; 3 layout directions</p>
+</div>
+
+<!-- ════════════════════════════════════════════
+     OPTION 1: Asymmetric Split
+════════════════════════════════════════════ -->
+<div class="option-section">
+  <div class="option-label">[OPTION 01]</div>
+  <h2 class="option-title">Asymmetric Split</h2>
+  <p class="option-desc">Solid green panel takes ~35% of the card, mirroring the website's signature 4px left-accent bar scaled up. Bold, architectural, immediately recognisable.</p>
+
+  <div class="cards-row">
+    <div class="card-group">
+      <span class="card-group-label">General Company Card</span>
+      <div class="card opt1-general">
+        <div class="accent-bar">
+          <div class="logo-text">Australia<br/>Venus<br/>Resource</div>
+          <div class="tag">[MINING FOR THE FUTURE]</div>
+        </div>
+        <div class="content">
+          <div>
+            <div class="bracket-label">[PHOSPHATE &amp; CRITICAL MINERALS]</div>
+          </div>
+          <div>
+            <div class="company-name">Korella<br/>Phosphate<br/>Project</div>
+            <div class="tagline" style="margin-top:8px;">Leveraging Australia's rich geological landscape for sustainable resource extraction and mineral sovereignty.</div>
+          </div>
+          <div class="details">
+            <span class="highlight">info@venusresource.com.au</span>
+            <span>Brisbane, QLD 4000</span>
+            <span>venusphos.com.au</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <span class="card-group-label">Personal Card</span>
+      <div class="card opt1-personal">
+        <div class="accent-bar">
+          <div class="logo-text">Australia<br/>Venus<br/>Resource</div>
+          <div class="tag">[MINING FOR THE FUTURE]</div>
+        </div>
+        <div class="content">
+          <div>
+            <div class="person-name">John Smith</div>
+            <div class="person-title">[DIRECTOR]</div>
+          </div>
+          <div class="contact-details">
+            <span class="label">Email</span>
+            <span>j.smith@venusresource.com.au</span>
+            <span class="label" style="margin-top:6px;">Phone</span>
+            <span>+61 400 000 000</span>
+            <span class="label" style="margin-top:6px;">Office</span>
+            <span>Level 12, 10 Eagle St, Brisbane QLD 4000</span>
+          </div>
+          <div class="website">venusphos.com.au</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     OPTION 2: Full Green Back (Two-Sided)
+════════════════════════════════════════════ -->
+<div class="option-section">
+  <div class="option-label">[OPTION 02]</div>
+  <h2 class="option-title">Full Green Back</h2>
+  <p class="option-desc">Classic two-sided card. Front is warm off-white with details, back is solid primary green with the brand name. Premium, confident.</p>
+
+  <div class="cards-row">
+    <!-- General -->
+    <div class="card-group">
+      <span class="card-group-label">General Company Card</span>
+      <div class="opt2-pair">
+        <div class="side-col">
+          <span class="side-label">Front</span>
+          <div class="card opt2-front">
+            <div class="top-section">
+              <div class="bracket-label">[PHOSPHATE &amp; CRITICAL MINERALS]</div>
+              <div class="company-name" style="margin-top:4px;">Australia<br/>Venus Resource</div>
+            </div>
+            <div class="tagline">Leveraging Australia's rich geological landscape for sustainable resource extraction and mineral sovereignty.</div>
+            <div class="bottom-details">
+              <div class="contact-col">
+                <span class="highlight">info@venusresource.com.au</span>
+                <span>Brisbane, QLD 4000, Australia</span>
+              </div>
+              <div class="website">venusphos.com.au</div>
+            </div>
+          </div>
+        </div>
+        <div class="side-col">
+          <span class="side-label">Back</span>
+          <div class="card opt2-back">
+            <div class="logo-text">Australia<br/>Venus<br/>Resource</div>
+            <div class="divider"></div>
+            <div class="tag">[MINING FOR THE FUTURE]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal -->
+    <div class="card-group" style="margin-top:24px;">
+      <span class="card-group-label">Personal Card</span>
+      <div class="opt2-pair">
+        <div class="side-col">
+          <span class="side-label">Front</span>
+          <div class="card opt2-front">
+            <div class="top-section">
+              <div class="bracket-label">[AUSTRALIA VENUS RESOURCE]</div>
+              <div class="person-name" style="margin-top:4px;">John Smith</div>
+              <div class="person-title">Director</div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:3px;">
+              <span style="font-size:0.5rem; color:#40493d; letter-spacing:0.06em;">j.smith@venusresource.com.au</span>
+              <span style="font-size:0.5rem; color:#40493d; letter-spacing:0.06em;">+61 400 000 000</span>
+              <span style="font-size:0.5rem; color:#40493d; letter-spacing:0.06em;">Level 12, 10 Eagle St, Brisbane QLD 4000</span>
+            </div>
+            <div class="bottom-details">
+              <div class="contact-col">
+                <span class="highlight">info@venusresource.com.au</span>
+              </div>
+              <div class="website">venusphos.com.au</div>
+            </div>
+          </div>
+        </div>
+        <div class="side-col">
+          <span class="side-label">Back</span>
+          <div class="card opt2-back">
+            <div class="logo-text">Australia<br/>Venus<br/>Resource</div>
+            <div class="divider"></div>
+            <div class="tag">[MINING FOR THE FUTURE]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     OPTION 3: Editorial Minimal
+════════════════════════════════════════════ -->
+<div class="option-section">
+  <div class="option-label">[OPTION 03]</div>
+  <h2 class="option-title">Editorial Minimal</h2>
+  <p class="option-desc">Almost entirely off-white with the green used only as a thin accent bar and data-label brackets. Maximum whitespace, "fine paper" feeling. Refined and quiet.</p>
+
+  <div class="cards-row">
+    <div class="card-group">
+      <span class="card-group-label">General Company Card</span>
+      <div class="card opt3-general">
+        <div class="top">
+          <div class="bracket-label">[PHOSPHATE &amp; CRITICAL MINERALS]</div>
+          <div class="code">AVR_2026</div>
+        </div>
+        <div class="middle">
+          <div class="company-name">Australia<br/>Venus Resource</div>
+          <div class="tagline">Leveraging Australia's rich geological landscape for sustainable resource extraction and mineral sovereignty.</div>
+        </div>
+        <div class="bottom">
+          <div class="details">
+            <span class="highlight">info@venusresource.com.au</span>
+            <span>Brisbane, QLD 4000</span>
+          </div>
+          <div class="website">venusphos.com.au</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <span class="card-group-label">Personal Card</span>
+      <div class="card opt3-personal">
+        <div class="top">
+          <div class="company-small">Australia Venus Resource</div>
+          <div class="bracket-label">[DIRECTOR]</div>
+        </div>
+        <div class="middle">
+          <div class="person-name">John Smith</div>
+          <div class="person-title">Director of Operations</div>
+        </div>
+        <div class="bottom">
+          <div class="detail-col">
+            <span class="label">Email</span>
+            <span>j.smith@venusresource.com.au</span>
+          </div>
+          <div class="detail-col">
+            <span class="label">Phone</span>
+            <span>+61 400 000 000</span>
+          </div>
+          <div class="detail-col">
+            <span class="label">Office</span>
+            <span>10 Eagle St, Brisbane</span>
+          </div>
+          <div class="detail-col">
+            <span class="label">Web</span>
+            <span style="color:#0d631b; font-weight:700;">venusphos.com.au</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
